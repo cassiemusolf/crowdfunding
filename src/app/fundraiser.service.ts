@@ -33,9 +33,9 @@ export class FundraiserService {
       goal: localUpdatedFundraiser.goal});
     }
 
-    deleteFundraiser(localFundraiserToDelete){
-      var fundraiserEntryInFirebase = this.getFundraiserById(localFundraiserToDelete.$key);
-      fundraiserEntryInFirebase.remove();
-    }
+  deleteFundraiser(localFundraiserToDelete){
+    var fundraiserEntryInFirebase = this.getFundraiserById(localFundraiserToDelete.$key);
+    fundraiserEntryInFirebase.remove();
+  }
 
 }

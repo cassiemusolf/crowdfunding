@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { FundraiserDetailComponent } from './fundraiser-detail/fundraiser-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditFundraiserComponent } from './edit-fundraiser/edit-fundraiser.component';
+import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
 
 const appRoutes: Routes = [
   {
@@ -22,11 +23,11 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'add-fundraiser',
+    component: AddFundraiserComponent
   }
-  // {
-  //   path: 'fundraisers/:id/edit-fundraiser',
-  //   component: EditFundraiserComponent
-  // }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

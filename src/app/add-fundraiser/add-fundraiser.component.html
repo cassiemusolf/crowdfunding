@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add a New Fundraiser</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Title:</label>
+        <br>
+        <input #newTitle>
+      </div>
+
+      <div>
+        <label>Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Category:</label>
+        <br>
+        <select #newCategory>
+          <option [value]="Animals"> Animals </option>
+          <option [value]="Medical"> Medical </option>
+          <option [value]="Volunteer"> Volunteer </option>
+          <option [value]="Business"> Business </option>
+          <option [value]="Charity"> Charity </option>
+          <option [value]="Travel"> Travel </option>
+          <option [value]="Family"> Family </option>
+          <option [value]="Creative"> Creative </option>
+          <option [value]="Other"> Other </option>
+        </select>
+      </div>
+
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+
+      <div>
+        <label>Goal:</label>
+        <br>
+        <input #newGoal>
+      </div>
+      <button (click)="submitForm(newTitle.value, newName.value, newCategory.value, newDescription.value, newGoal.value); newTitle.value=''; newName.value=''; newCategory.value=''; newDescription.value=''; newGoal.value=''">Add</button>
+    </div>
+  </div>
+</div>
