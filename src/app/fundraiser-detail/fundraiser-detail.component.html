@@ -1,5 +1,8 @@
-<h2>{{(fundraiserToDisplay | async)?.title}}</h2>
-<h3>Goal: {{(fundraiserToDisplay | async)?.goal}}</h3>
-<h3>Created By: {{(fundraiserToDisplay | async)?.name}}</h3>
-<h5><em>{{(fundraiserToDisplay | async)?.category}}</em></h5>
-<h4>{{(fundraiserToDisplay | async)?.description}}</h4>
+<div class="details">
+  <h2>{{(fundraiserToDisplay | async)?.title}}</h2>
+  <hr>
+  <h3>Goal: {{(fundraiserToDisplay | async)?.goal}}</h3>
+  <h3>Created By: {{(fundraiserToDisplay | async)?.name}}</h3>
+  <h5><em>{{(fundraiserToDisplay | async)?.category}}</em></h5>
+  <h4>{{(fundraiserToDisplay | async)?.description}}</h4>
+</div>

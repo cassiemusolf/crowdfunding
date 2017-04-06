@@ -1,42 +1,58 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Edit This Fundraiser</h3>
+    <h3 class="panel-title edit">Edit This Fundraiser</h3>
   </div>
   <div class="panel-body">
     <div>
       <div>
-        <label>New Fundraiser Title:</label>
-        <input [(ngModel)]="selectedFundraiser.title">
+        <div>
+          <label>New Fundraiser Title:</label>
+          <br>
+          <input class="form-control" [(ngModel)]="selectedFundraiser.title">
+        </div>
         <br>
-
-        <label>New Fundraiser Name:</label>
-        <input [(ngModel)]="selectedFundraiser.name">
+        <div>
+          <label>New Fundraiser Name:</label>
+          <br>
+          <input class="form-control" [(ngModel)]="selectedFundraiser.name">
+        </div>
         <br>
-
-        <label>New Fundraiser Category:</label>
-        <select [(ngModel)]="selectedFundraiser.category">
-          <option [value]="Animals"> Animals </option>
-          <option [value]="Medical"> Medical </option>
-          <option [value]="Volunteer"> Volunteer </option>
-          <option [value]="Business"> Business </option>
-          <option [value]="Charity"> Charity </option>
-          <option [value]="Travel"> Travel </option>
-          <option [value]="Family"> Family </option>
-          <option [value]="Creative"> Creative </option>
-          <option [value]="Other"> Other </option>
-        </select>
+        <div>
+          <label>New Fundraiser Category:</label>
+          <br>
+          <select class="form-control" [(ngModel)]="selectedFundraiser.category">
+            <option [value]="Animals"> Animals </option>
+            <option [value]="Medical"> Medical </option>
+            <option [value]="Volunteer"> Volunteer </option>
+            <option [value]="Business"> Business </option>
+            <option [value]="Charity"> Charity </option>
+            <option [value]="Travel"> Travel </option>
+            <option [value]="Family"> Family </option>
+            <option [value]="Creative"> Creative </option>
+            <option [value]="Other"> Other </option>
+          </select>
+        </div>
         <br>
-
-        <label>New Fundraiser Description:</label>
-        <textarea [(ngModel)]="selectedFundraiser.description"></textarea>
+        <div>
+          <label>New Fundraiser Description:</label>
+          <br>
+          <textarea class="form-control" [(ngModel)]="selectedFundraiser.description"></textarea>
+        </div>
         <br>
-
-        <label>New Fundraiser Goal:</label>
-        <input [(ngModel)]="selectedFundraiser.goal">
+        <div>
+          <label>New Fundraiser Goal:</label>
+          <br>
+          <input class="form-control" [(ngModel)]="selectedFundraiser.goal">
+        </div>
         <br>
-
-        <button (click)="beginUpdatingFundraiser(selectedFundraiser)">Update</button>
+        <div>
+          <label>New Fundraiser Image:</label>
+          <br>
+          <input class="form-control" [(ngModel)]="selectedFundraiser.image">
+        </div>
+        <br>
+        <button class="btn btn-warning" (click)="beginUpdatingFundraiser(selectedFundraiser)">Update</button>
         <hr>
-        <button (click)="beginDeletingFundraiser(selectedFundraiser)">Delete</button>
+        <button class="btn btn-danger" (click)="beginDeletingFundraiser(selectedFundraiser)">Delete</button>
       </div>
     </div>

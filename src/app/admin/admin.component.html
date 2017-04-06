@@ -7,19 +7,19 @@
       <div>
         <label>Title:</label>
         <br>
-        <input #newTitle>
+        <input class="form-control" #newTitle>
       </div>
-
+      <br>
       <div>
         <label>Name:</label>
         <br>
-        <input #newName>
+        <input class="form-control" #newName>
       </div>
-
+      <br>
       <div>
         <label>Category:</label>
         <br>
-        <select #newCategory>
+        <select class="form-control" #newCategory>
           <option [value]="Animals"> Animals </option>
           <option [value]="Medical"> Medical </option>
           <option [value]="Volunteer"> Volunteer </option>
@@ -31,19 +31,26 @@
           <option [value]="Other"> Other </option>
         </select>
       </div>
-
+      <br>
       <div>
         <label>Description:</label>
         <br>
-        <textarea #newDescription></textarea>
+        <textarea class="form-control" #newDescription></textarea>
       </div>
-
+      <br>
       <div>
         <label>Goal:</label>
         <br>
-        <input #newGoal>
+        <input class="form-control" #newGoal>
       </div>
-      <button (click)="submitForm(newTitle.value, newName.value, newCategory.value, newDescription.value, newGoal.value); newTitle.value=''; newName.value=''; newCategory.value=''; newDescription.value=''; newGoal.value=''">Add</button>
+      <br>
+      <div>
+        <label>Image URL:</label>
+        <br>
+        <input class="form-control" #newImage>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="submitForm(newTitle.value, newName.value, newCategory.value, newDescription.value, newGoal.value, newImage.value); newTitle.value=''; newName.value=''; newCategory.value=''; newDescription.value=''; newGoal.value=''; newImage.value=''">Add</button>
     </div>
   </div>
 </div>

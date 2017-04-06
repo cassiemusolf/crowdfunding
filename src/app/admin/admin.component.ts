@@ -16,8 +16,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(title: string, name: string, category: string, description: string, goal: string) {
-    var newFundraiser: Fundraiser = new Fundraiser(title, name, category, description, goal);
+  submitForm(title: string, name: string, category: string, description: string, goal: string, image: string) {
+    var newFundraiser: Fundraiser = new Fundraiser(title, name, category, description, goal, image);
     this.fundraiserService.addFundraiser(newFundraiser);
   }
 
