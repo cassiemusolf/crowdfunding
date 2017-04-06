@@ -21,7 +21,7 @@ export class FundraiserComponent implements OnInit {
   }
 
  goToDetailPage(clickedFundraiser: Fundraiser) {
-   this.router.navigate(['fundraisers', clickedFundraiser.id]);
+  //  this.router.navigate(['fundraisers', clickedFundraiser.id]);
  }
 
 }

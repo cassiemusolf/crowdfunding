@@ -16,12 +16,16 @@ export class FundraiserService {
     return this.fundraisers;
   }
 
-  getFundraiserById(fundraiserId: string){
-    for (var i = 0; i <= FUNDRAISERS.length - 1; i++) {
-      if (FUNDRAISERS[i].id === fundraiserId) {
-        return FUNDRAISERS[i];
-      }
-    }
+  addFundraiser(newFundraiser: Fundraiser) {
+    this.fundraisers.push(newFundraiser);
+  }
+
+  getFundraiserById(){
+    // for (var i = 0; i <= FUNDRAISERS.length - 1; i++) {
+    //   if (FUNDRAISERS[i].id === fundraiserId) {
+    //     return FUNDRAISERS[i];
+    //   }
+    // }
   }
 
 }

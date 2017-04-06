@@ -21,6 +21,6 @@ export class FundraiserDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.fundraiserId = urlParameters['id'];
     });
-    this.fundraiserToDisplay = this.fundraiserService.getFundraiserById(this.fundraiserId);
+    // this.fundraiserToDisplay = this.fundraiserService.getFundraiserById(this.fundraiserId);
   }
 }
