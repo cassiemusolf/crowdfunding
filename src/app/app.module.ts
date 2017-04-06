@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AdminComponent } from './admin/admin.component';
 import { EditFundraiserComponent } from './edit-fundraiser/edit-fundraiser.component';
 import { AddFundraiserComponent } from './add-fundraiser/add-fundraiser.component';
+import { GroupPipe } from './group.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     FundraiserDetailComponent,
     AdminComponent,
     EditFundraiserComponent,
-    AddFundraiserComponent
+    AddFundraiserComponent,
+    GroupPipe
   ],
   imports: [
     BrowserModule,

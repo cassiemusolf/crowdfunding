@@ -1,5 +1,23 @@
 <h1>Main Page</h1>
-<div *ngFor="let fundraiser of fundraisers | async" class="panel panel-default">
+
+<div>
+  <label>Which Category Do You Want to See?:</label>
+  <br>
+  <select (change)="onChange($event.target.value)">
+    <option value="Animals"> Animals </option>
+    <option value="Medical"> Medical </option>
+    <option value="Volunteer"> Volunteer </option>
+    <option value="Business"> Business </option>
+    <option value="Charity"> Charity </option>
+    <option value="Travel"> Travel </option>
+    <option value="Family"> Family </option>
+    <option value="Creative"> Creative </option>
+    <option value="Other"> Other </option>
+    <option value="All Fundraisers" selected="selected"> All </option>
+  </select>
+</div>
+
+<div *ngFor="let fundraiser of fundraisers | async | group:filterByCategory" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(fundraiser)"><em>{{fundraiser.title}}</em> by {{fundraiser.name}}</h3>
     <div *ngIf="currentRoute === '/admin'">

@@ -25,4 +25,10 @@ export class FundraiserComponent implements OnInit {
     this.router.navigate(['fundraisers', clickedFundraiser.$key]);
   }
 
+  filterByCategory: string = "All Fundraisers";
+
+  onChange(optionFromMenu) {
+    this.filterByCategory = optionFromMenu;
+  }
+
 }
