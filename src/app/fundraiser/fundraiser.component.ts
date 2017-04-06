@@ -13,6 +13,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class FundraiserComponent implements OnInit {
   fundraisers: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private fundraiserService: FundraiserService){}
 

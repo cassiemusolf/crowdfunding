@@ -1,6 +1,11 @@
 <h1>Main Page</h1>
-<div *ngFor="let fundraiser of fundraisers | async" (click)="goToDetailPage(fundraiser)" class="panel panel-default">
+<div *ngFor="let fundraiser of fundraisers | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{fundraiser.title}}</em> by {{fundraiser.name}}</h3>
+    <h3 (click)="goToDetailPage(fundraiser)"><em>{{fundraiser.title}}</em> by {{fundraiser.name}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{fundraiser.description}}
+      <hr>
+      <app-edit-fundraiser [selectedFundraiser]="fundraiser"></app-edit-fundraiser>
+    </div>
   </div>
 </div>

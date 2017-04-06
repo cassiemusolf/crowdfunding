@@ -4,12 +4,13 @@ import { Location } from '@angular/common';
 import { Fundraiser } from '../fundraiser.model';
 import { FundraiserService } from '../fundraiser.service';
 import { FirebaseObjectObservable } from 'angularfire2';
+import { EditFundraiserComponent } from '../edit-fundraiser/edit-fundraiser.component';
 
 @Component({
   selector: 'app-fundraiser-detail',
   templateUrl: './fundraiser-detail.component.html',
   styleUrls: ['./fundraiser-detail.component.css'],
-  providers: [FundraiserService]
+  providers: [FundraiserService, EditFundraiserComponent]
 })
 
 export class FundraiserDetailComponent implements OnInit {
@@ -24,4 +25,5 @@ export class FundraiserDetailComponent implements OnInit {
     });
     this.fundraiserToDisplay = this.fundraiserService.getFundraiserById(this.fundraiserId);
   }
+
 }

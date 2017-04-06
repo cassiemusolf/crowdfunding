@@ -24,4 +24,13 @@ export class FundraiserService {
     return this.angularFire.database.object('fundraisers/' + fundraiserId);
   }
 
+  updateFundraiser(localUpdatedFundraiser){
+    var fundraiserEntryInFirebase = this.getFundraiserById(localUpdatedFundraiser.$key);
+    fundraiserEntryInFirebase.update({title: localUpdatedFundraiser.title,
+      name: localUpdatedFundraiser.name,
+      category: localUpdatedFundraiser.category,
+      description: localUpdatedFundraiser.description,
+      goal: localUpdatedFundraiser.goal});
+    }
+
 }
