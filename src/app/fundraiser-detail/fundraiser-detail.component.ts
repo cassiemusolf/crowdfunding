@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Fundraiser } from '../fundraiser.model';
 import { FundraiserService } from '../fundraiser.service';
+import { FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-fundraiser-detail',
@@ -13,7 +14,7 @@ import { FundraiserService } from '../fundraiser.service';
 
 export class FundraiserDetailComponent implements OnInit {
   fundraiserId: string;
-  fundraiserToDisplay: Fundraiser;
+  fundraiserToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private fundraiserService: FundraiserService) {}
 
@@ -21,6 +22,6 @@ export class FundraiserDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.fundraiserId = urlParameters['id'];
     });
-    // this.fundraiserToDisplay = this.fundraiserService.getFundraiserById(this.fundraiserId);
+    this.fundraiserToDisplay = this.fundraiserService.getFundraiserById(this.fundraiserId);
   }
 }

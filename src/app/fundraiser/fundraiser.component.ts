@@ -20,8 +20,8 @@ export class FundraiserComponent implements OnInit {
     this.fundraisers = this.fundraiserService.getFundraisers();
   }
 
- goToDetailPage(clickedFundraiser: Fundraiser) {
-  //  this.router.navigate(['fundraisers', clickedFundraiser.id]);
- }
+  goToDetailPage(clickedFundraiser) {
+    this.router.navigate(['fundraisers', clickedFundraiser.$key]);
+  }
 
 }

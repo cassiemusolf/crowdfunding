@@ -20,12 +20,8 @@ export class FundraiserService {
     this.fundraisers.push(newFundraiser);
   }
 
-  getFundraiserById(){
-    // for (var i = 0; i <= FUNDRAISERS.length - 1; i++) {
-    //   if (FUNDRAISERS[i].id === fundraiserId) {
-    //     return FUNDRAISERS[i];
-    //   }
-    // }
+  getFundraiserById(fundraiserId: string){
+    return this.angularFire.database.object('fundraisers/' + fundraiserId);
   }
 
 }
