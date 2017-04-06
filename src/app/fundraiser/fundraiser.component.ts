@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Fundraiser } from '../fundraiser.model';
 import { Router } from '@angular/router';
 import { FundraiserService } from '../fundraiser.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
 
 @Component({
   selector: 'app-fundraiser',
@@ -10,7 +12,7 @@ import { FundraiserService } from '../fundraiser.service';
   providers: [FundraiserService]
 })
 export class FundraiserComponent implements OnInit {
-  fundraisers: Fundraiser[];
+  fundraisers: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private fundraiserService: FundraiserService){}
 

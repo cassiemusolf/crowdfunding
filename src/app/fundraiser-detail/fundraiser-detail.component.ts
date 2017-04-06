@@ -12,14 +12,14 @@ import { FundraiserService } from '../fundraiser.service';
 })
 
 export class FundraiserDetailComponent implements OnInit {
-  fundraiserId: number;
+  fundraiserId: string;
   fundraiserToDisplay: Fundraiser;
 
   constructor(private route: ActivatedRoute, private location: Location, private fundraiserService: FundraiserService) {}
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.fundraiserId = parseInt(urlParameters['id']);
+      this.fundraiserId = urlParameters['id'];
     });
     this.fundraiserToDisplay = this.fundraiserService.getFundraiserById(this.fundraiserId);
   }
