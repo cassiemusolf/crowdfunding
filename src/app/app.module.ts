@@ -5,16 +5,20 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
+import { routing } from './app.routing';
+import { FundraiserComponent } from './fundraiser/fundraiser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    FundraiserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
