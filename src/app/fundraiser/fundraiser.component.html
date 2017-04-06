@@ -1,4 +1,4 @@
 <h1>Main Page</h1>
-<p>
-  fundraiser works!
-</p>
+<div *ngFor="let fundraiser of fundraisers">
+    <h3><em>{{fundraiser.title}}</em> by {{fundraiser.name}}</h3>
+</div>
