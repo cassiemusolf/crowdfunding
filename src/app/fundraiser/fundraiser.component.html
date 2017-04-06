@@ -1,4 +1,6 @@
 <h1>Main Page</h1>
-<div *ngFor="let fundraiser of fundraisers">
+<div *ngFor="let fundraiser of fundraisers" (click)="goToDetailPage(fundraiser)" class="panel panel-default">
+  <div class="panel-body">
     <h3><em>{{fundraiser.title}}</em> by {{fundraiser.name}}</h3>
+  </div>
 </div>

@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { routing } from './app.routing';
 import { FundraiserComponent } from './fundraiser/fundraiser.component';
+import { FundraiserDetailComponent } from './fundraiser-detail/fundraiser-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    FundraiserComponent
+    FundraiserComponent,
+    FundraiserDetailComponent
   ],
   imports: [
     BrowserModule,
