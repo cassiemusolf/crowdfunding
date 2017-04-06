@@ -20,4 +20,10 @@ export class EditFundraiserComponent implements OnInit {
   beginUpdatingFundraiser(fundraiserToUpdate){
     this.fundraiserService.updateFundraiser(fundraiserToUpdate);
   }
+
+  beginDeletingFundraiser(fundraiserToDelete){
+    if(confirm("Are you sure you want to delete this fundraiser??")){
+      this.fundraiserService.deleteFundraiser(fundraiserToDelete);
+    }
+  }
 }
