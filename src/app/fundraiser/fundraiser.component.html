@@ -19,11 +19,11 @@
 
 <div *ngFor="let fundraiser of fundraisers | async | group:filterByCategory" (click)="goToDetailPage(fundraiser)" class="panel panel-default">
     <div class="panel-body shadow">
-      <h3><em>{{fundraiser.title}}</em></h3>
-      <p> by {{fundraiser.name}}</p>
+      <h3><strong>{{fundraiser.title}}</strong></h3>
+      <h3><em> by {{fundraiser.name}}</em></h3>
     </div>
     <div *ngIf="currentRoute === '/admin'">
-      {{fundraiser.description}}
+      <p>{{fundraiser.description}}</p>
       <hr>
       <app-edit-fundraiser [selectedFundraiser]="fundraiser"></app-edit-fundraiser>
     </div>
